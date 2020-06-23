@@ -1,0 +1,37 @@
+.button-demo {
+  display: flex;
+  user-select: none;
+
+  .buttons {
+    display: grid;
+    grid-template-columns: 100px 150px 150px 150px;
+    gap: 10px 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: fit-content;
+
+    .h-center {
+      text-align: center;
+    }
+
+    .v-center {
+      margin: auto 0;
+    }
+
+    test-button {
+      margin: auto;
+    }
+  }
+
+  .clicks {
+    margin: 15px;
+
+    span {
+      margin: 5px;
+    }
+  }
+
+  .disabled {
+    margin: 15px;
+  }
+}

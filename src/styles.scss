@@ -1,0 +1,94 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~highlight.js/styles/github.css';
+
+body[theme=test] {
+  // Action
+  --test-action-idle: #7a3db3;      // Purple
+  --test-action-press: #592c82;     // Dark Purple
+  --test-action-hover: #592c82;     // Dark Purple
+  --test-action-disabled: #d4c1e6;  // Grey Purple
+
+  // Backgrounds
+  --test-background-main: #582c7d;
+  --test-background-secondary: #f9f9f9;
+  --test-background-off: #ccc;
+  --test-background: #fff;
+  --test-canvas-background: #eee;   // Grey e
+  --test-item-background: #fff;     // White
+
+  // Selection
+  --test-selected-dark: #0099a8;    // Dark Aqua
+  --test-selected: #06afba;         // Aqua
+  --test-focus: #67d7dc;            // Bright Aqua
+  --test-repopulated: #a7e7ea;      // Very Bright Aqua
+  --test-item-selected: #f0fbfb;    // Brightest Aqua
+  --test-item-hover: #fafafa;       // Brightestest Aqua
+
+  // Texts
+  --test-text: #555;                // Grey 5
+  --test-paragraph: #777;           // Grey 7
+  --test-disabled-text: #aaa;       // Grey a
+  --test-separator: #ddd;           // Grey d
+}
+
+body[theme=test-dark] {
+  // Action
+  --test-action-idle: #888;      // Purple
+  --test-action-press: #666;     // Dark Purple
+  --test-action-hover: #555;     // Dark Purple
+  --test-action-disabled: #aaa;  // Grey Purple
+
+  // Backgrounds
+  --test-background-main: #582c7d;
+  --test-background-secondary: #222;
+  --test-background-off: #ccc;
+  --test-background: #444;
+  --test-canvas-background: #777;   // Grey e
+  --test-item-background: #444;     // White
+
+  // Selection
+  --test-selected-dark: #0099a8;    // Dark Aqua
+  --test-selected: #06afba;         // Aqua
+  --test-focus: #67d7dc;            // Bright Aqua
+  --test-repopulated: #a7e7ea;      // Very Bright Aqua
+  --test-item-selected: #777;    // Brightest Aqua
+  --test-item-hover: #555;       // Brightestest Aqua
+
+  // Texts
+  --test-text: #eee;                // Grey 5
+  --test-paragraph: #aaa;           // Grey 7
+  --test-disabled-text: #ddd;       // Grey a
+  --test-separator: #aaa;           // Grey d
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  scroll-behavior: smooth;
+
+  // Scrollbar firefox
+  scrollbar-color: #ccc transparent;
+
+  // Scrollbar chrome
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 6px;
+    border: solid 2px white;
+
+    &:hover {
+      background-color: #aaa;
+    }
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}

@@ -1,0 +1,31 @@
+.checkbox-demo {
+  display: flex;
+  user-select: none;
+
+  .checkbox {
+    display: grid;
+    grid-template-columns: 150px 80px 80px 80px 120px;
+    gap: 10px 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: fit-content;
+    font-size: 13px;
+    color: #555;
+
+    .h-center {
+      text-align: center;
+    }
+
+    .v-center {
+      margin: auto 0;
+    }
+
+    test-checkbox {
+      margin: auto;
+    }
+  }
+
+  .disabled {
+    margin: 15px;
+  }
+}

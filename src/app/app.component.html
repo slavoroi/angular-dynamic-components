@@ -1,0 +1,73 @@
+<article [attr.theme]="selectedTheme">
+    <!-- Header -->
+    <header class="main-header">
+        <img src="../assets/test-logo.png">
+        <div class="divider"></div>
+        <h1>Storybook</h1>
+        <h2>version 1.0.0</h2>
+    </header>
+
+    <header class="secondary-header">
+        <div class="menu-button-wrapper">
+        </div>
+
+        <div class="secondary-title">test Components Library</div>
+
+        <!-- Theme -->
+        <div class="language">
+            <span class="language-title">Theme</span>
+            <div class="language-picker">
+            </div>
+        </div>
+
+        <!-- Language -->
+        <div class="language">
+            <span class="language-title">Language</span>
+            <div class="language-picker">
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <mat-drawer-container class="drawer-container" autosize>
+            <!-- Component list -->
+            <mat-drawer opened="{{isOpened()}}" #drawer class="example-sidenav" mode="side">
+                <aside>
+                    <mat-accordion>
+                        <mat-expansion-panel
+                                *ngFor="let group of stories"
+                                [expanded]="group.isOpen"
+                                [id]="group.id">
+
+                            <!-- Group Name -->
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <span>{{group.name}}</span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+
+                            <!-- Group components -->
+                            <mat-nav-list>
+                                <mat-list-item
+                                        (click)="onSelect(story)"
+                                        *ngFor="let story of group.stories"
+                                        [id]="story.storyInstance.id">
+                                    <span [ngClass]="{'selected-menu-item': story === selected}">{{story.storyInstance.name}}</span>
+                                </mat-list-item>
+                            </mat-nav-list>
+                        </mat-expansion-panel>
+
+                    </mat-accordion>
+                </aside>
+            </mat-drawer>
+
+            <mat-drawer-content class="drawer-content">
+                <!-- Placeholder -->
+                <div *ngIf="!selected" class="select-component">Please select a component</div>
+
+                <!-- Component details -->
+                <app-story *ngIf="selected" [story]="selected" [attr.theme]="selectedTheme"></app-story>
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </section>
+</article>

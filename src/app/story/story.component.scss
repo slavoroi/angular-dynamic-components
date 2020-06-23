@@ -1,0 +1,106 @@
+article {
+  display: grid;
+  height: calc(100% - 30px);
+  grid-template-rows: auto auto 1fr;
+  grid-gap: 15px;
+  margin: 0 15px;
+
+  background-color: var(--test-background);
+}
+
+header {
+  margin: 15px;
+}
+
+.title {
+  border-bottom: 1px solid var(--test-disabled-text);
+  margin: 20px 20px 0 20px;
+  user-select: none;
+  display: flex;
+}
+
+section {
+  .code {
+    background-color: #eee;
+    position: relative;
+
+    code {
+      white-space: pre-wrap;
+    }
+
+    .click-to-copy {
+      position: absolute;
+      background-color: var(--test-background-main);
+      color: white;
+      font-weight: 100;
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      right: 0;
+
+      span,
+      test-icon {
+        margin: auto 0;
+      }
+
+      test-icon {
+        margin-left: 5px;
+
+        &:before {
+          position: absolute;
+          height: 0;
+          width: 0;
+          content: ' ';
+          border: 9px solid;
+          bottom: -14px;
+          border-color: transparent transparent #eee #eee;
+          left: -106px;
+        }
+      }
+    }
+  }
+}
+
+.live-example {
+  margin-bottom: 15px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.arrow {
+  margin: auto 8px;
+  --test-icon-size: 12px;
+}
+
+.flipped {
+  transform: rotate(270deg);
+}
+
+.status,
+.link-to-zelpin {
+  margin: 40px 20px;
+
+  &-title {
+    margin-right: 10px;
+  }
+}
+
+.status {
+  .red {
+    color: #660400;
+  }
+
+  .yellow {
+    color: #666600;
+  }
+
+  .lightGreen {
+    color: #008800;
+  }
+
+  .green {
+    color: #006600;
+  }
+}
